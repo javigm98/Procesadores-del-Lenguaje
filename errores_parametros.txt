@@ -1,0 +1,22 @@
+fun int f1(int x, vector<int> v){
+	return v[0] + x;
+}
+
+proc p1(int & x, vector<int>v1, vector<int> & v2){
+	v2[0] = v1[0] + x;
+	x = v1[1];
+}
+
+vector<int> v = creaVector(0, 3);
+vector<int> w = creaVector(5, 4);
+
+proc p2(int & x){
+	x = 7;
+}
+
+# Pasamos como parámetro por referencia una expresión 
+# no asignable
+
+call p2(3*2-4);
+
+vector<vector<int>> v = creaVector(v, 3);

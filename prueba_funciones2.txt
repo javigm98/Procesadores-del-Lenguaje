@@ -1,0 +1,18 @@
+# Procedimientos anidados
+# Vemos como podemos acceder a cualquier variable 
+# del ámbito en el que se declaran
+
+
+int x = 0;
+proc p(int y){
+	proc q (int z){
+		if( x > 0){
+			x = y + z;
+		}
+		else {
+			x = y*z;
+		}
+	}
+	call q(y);
+}
+call p(5);
